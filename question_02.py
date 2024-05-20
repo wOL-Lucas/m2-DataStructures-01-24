@@ -23,7 +23,7 @@ class Node:
         self.previous = None
 
 
-class DoubleLinkedList:
+class LinkedList:
     def __init__(self, head):
         self.head = head
         self.tail = head
@@ -109,19 +109,19 @@ if __name__ == "__main__":
         Node("Pineapple", 5.5),  # pen pineapple apple pen
     ]
 
-    doubleLinkedList = DoubleLinkedList(products[0])
+    linkedList = LinkedList(products[0])
     for product in products[1:]:
-        doubleLinkedList.insertLast(product)
+        linkedList.insertLast(product)
 
-    doubleLinkedList.displayAll()
+    linkedList.displayAll()
 
     print("\n\nNow reverse")
-    doubleLinkedList.displayAll(reverse=True)
+    linkedList.displayAll(reverse=True)
 
     print("\n\nFind")
-    doubleLinkedList.find("Banana", display=True)
+    linkedList.find("Banana", display=True)
 
     print("\n\nRemove")
-    doubleLinkedList.remove("Banana")
+    linkedList.remove("Banana")
 
-    doubleLinkedList.displayAll()
+    linkedList.displayAll()
